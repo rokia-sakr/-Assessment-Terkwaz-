@@ -7,7 +7,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import pages.Homepage;
+import pages.GooglePage;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class googlesearch 
 {
 	ChromeDriver driver ; 
-	Homepage homepage;
+	GooglePage homepage;
 	@Test
 	public void opeURL() throws InterruptedException 
 	{
@@ -25,7 +26,7 @@ public class googlesearch
 		driver = new ChromeDriver(); 
 		SoftAssert sa= new SoftAssert();   //I used soft assertion beacuse if test fail don't stop execution 
 		driver.navigate().to("https://www.google.com/");
-		homepage=new Homepage(driver);
+		homepage=new GooglePage(driver);
 		homepage.searchforkey("selenium webdriver");   //used this method from class homepage
 		WebElement result = driver.findElement(By.cssSelector("div.iDjcJe span"));
 		sa.assertEquals(result.getText(),"What is the WebDriver in selenium?");//assert that this sentence is displayedand equal result

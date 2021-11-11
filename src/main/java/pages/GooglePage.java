@@ -26,8 +26,9 @@ public class GooglePage extends PageBase
 	public void searchforkey(String keysearch) throws InterruptedException
 	{
 		textbox.sendKeys(keysearch);
+		
 		Thread.sleep(30);
-		textbox.sendKeys(Keys.ENTER);
+		   textbox.sendKeys(Keys.ENTER);
 		
 		
 	}
