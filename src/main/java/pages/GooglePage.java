@@ -10,9 +10,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Homepage extends PageBase
+public class GooglePage extends PageBase
 {
-	public Homepage(WebDriver driver) {
+	public GooglePage(WebDriver driver) {
 		super(driver);
 		jse = (JavascriptExecutor) driver; 
 		action = new Actions(driver); 
